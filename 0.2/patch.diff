@@ -1,0 +1,780 @@
+From a50d5856be1018b1ecf79bb7a4b84c4986807729 Mon Sep 17 00:00:00 2001
+From: Andreas Jansson <zirda2@gmail.com>
+Date: Thu, 16 Nov 2017 20:51:27 +0100
+Subject: [PATCH] 0.01
+
+---
+ .idea/Uppgift 2.iml                |  11 ++
+ .idea/misc.xml                     |   4 +
+ .idea/modules.xml                  |   8 +
+ .idea/workspace.xml                | 322 +++++++++++++++++++++++++++++++++++++
+ Person.py                          |  24 +++
+ Program.py                         |  38 +++++
+ School.py                          |  36 +++++
+ Staff.py                           |  33 ++++
+ Student.py                         |  38 +++++
+ __pycache__/Person.cpython-36.pyc  | Bin 0 -> 1130 bytes
+ __pycache__/Staff.cpython-36.pyc   | Bin 0 -> 1818 bytes
+ __pycache__/Student.cpython-36.pyc | Bin 0 -> 2158 bytes
+ main.py                            |  88 ++++++++++
+ 13 files changed, 602 insertions(+)
+ create mode 100644 .idea/Uppgift 2.iml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/workspace.xml
+ create mode 100644 Person.py
+ create mode 100644 Program.py
+ create mode 100644 School.py
+ create mode 100644 Staff.py
+ create mode 100644 Student.py
+ create mode 100644 __pycache__/Person.cpython-36.pyc
+ create mode 100644 __pycache__/Staff.cpython-36.pyc
+ create mode 100644 __pycache__/Student.cpython-36.pyc
+ create mode 100644 main.py
+
+diff --git a/.idea/Uppgift 2.iml b/.idea/Uppgift 2.iml
+new file mode 100644
+index 0000000..6711606
+--- /dev/null
++++ b/.idea/Uppgift 2.iml	
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="TestRunnerService">
++    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..4ac6e91
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6.2 (C:\Program Files\Python36\python.exe)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000..6e4dbed
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/Uppgift 2.iml" filepath="$PROJECT_DIR$/.idea/Uppgift 2.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+index 0000000..fcbc34a
+--- /dev/null
++++ b/.idea/workspace.xml
+@@ -0,0 +1,322 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="ed339a87-6152-4960-a25d-b93e171e810f" name="Default" comment="" />
++    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
++    <option name="TRACKING_ENABLED" value="true" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="CoverageDataManager">
++    <SUITE FILE_PATH="coverage/Uppgift_2$main.coverage" NAME="main Coverage Results" MODIFIED="1510859348935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++  </component>
++  <component name="FileEditorManager">
++    <leaf>
++      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/main.py">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="256">
++              <caret line="28" column="59" lean-forward="true" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
++              <folding>
++                <element signature="e#1#16#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="Person.py" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/Person.py">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="80">
++              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
++              <folding />
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="Student.py" pinned="false" current-in-tab="true">
++        <entry file="file://$PROJECT_DIR$/Student.py">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="160">
++              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
++              <folding />
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="Staff.py" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/Staff.py">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="128">
++              <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
++              <folding>
++                <element signature="e#0#25#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="Program.py" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/Program.py">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="515">
++              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
++              <folding>
++                <element signature="e#0#25#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="School.py" pinned="false" current-in-tab="false">
++        <entry file="file://$PROJECT_DIR$/School.py">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="432">
++              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
++              <folding>
++                <element signature="e#0#27#0" expanded="true" />
++              </folding>
++            </state>
++          </provider>
++        </entry>
++      </file>
++      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
++        <entry file="file://$USER_HOME$/Downloads/main.py">
++          <provider selected="true" editor-type-id="text-editor">
++            <state relative-caret-position="304">
++              <caret line="23" column="58" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
++              <folding />
++            </state>
++          </provider>
++        </entry>
++      </file>
++    </leaf>
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Python Script" />
++      </list>
++    </option>
++  </component>
++  <component name="IdeDocumentHistory">
++    <option name="CHANGED_PATHS">
++      <list>
++        <option value="$PROJECT_DIR$/person.py" />
++        <option value="$PROJECT_DIR$/student.py" />
++        <option value="$PROJECT_DIR$/staff.py" />
++        <option value="$PROJECT_DIR$/main.py" />
++        <option value="$PROJECT_DIR$/Person.py" />
++        <option value="$PROJECT_DIR$/Student.py" />
++        <option value="$PROJECT_DIR$/Program.py" />
++        <option value="$PROJECT_DIR$/Staff.py" />
++        <option value="$PROJECT_DIR$/School.py" />
++      </list>
++    </option>
++  </component>
++  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
++  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
++  <component name="JsGulpfileManager">
++    <detection-done>true</detection-done>
++    <sorting>DEFINITION_ORDER</sorting>
++  </component>
++  <component name="ProjectFrameBounds" extendedState="6">
++    <option name="y" value="22" />
++    <option name="width" value="1920" />
++    <option name="height" value="1100" />
++  </component>
++  <component name="ProjectView">
++    <navigator currentView="ProjectPane" proportions="" version="1">
++      <flattenPackages />
++      <showMembers />
++      <showModules />
++      <showLibraryContents />
++      <hideEmptyPackages />
++      <abbreviatePackageNames />
++      <autoscrollToSource />
++      <autoscrollFromSource />
++      <sortByType />
++      <manualOrder />
++      <foldersAlwaysOnTop value="true" />
++    </navigator>
++    <panes>
++      <pane id="Scratches" />
++      <pane id="Scope" />
++      <pane id="ProjectPane">
++        <subPane>
++          <expand>
++            <path>
++              <item name="Uppgift 2" type="b2602c69:ProjectViewProjectNode" />
++              <item name="Uppgift 2" type="462c0819:PsiDirectoryNode" />
++            </path>
++          </expand>
++          <select />
++        </subPane>
++      </pane>
++    </panes>
++  </component>
++  <component name="PropertiesComponent">
++    <property name="WebServerToolWindowFactoryState" value="false" />
++  </component>
++  <component name="RunDashboard">
++    <option name="ruleStates">
++      <list>
++        <RuleState>
++          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
++        </RuleState>
++        <RuleState>
++          <option name="name" value="StatusDashboardGroupingRule" />
++        </RuleState>
++      </list>
++    </option>
++  </component>
++  <component name="RunManager" selected="Python.main">
++    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <option name="IS_MODULE_SDK" value="true" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <module name="Uppgift 2" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++    </configuration>
++    <recent_temporary>
++      <list size="1">
++        <item index="0" class="java.lang.String" itemvalue="Python.main" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="ShelveChangesManager" show_recycled="false">
++    <option name="remove_strategy" value="false" />
++  </component>
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="ed339a87-6152-4960-a25d-b93e171e810f" name="Default" comment="" />
++      <created>1510856513951</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1510856513951</updated>
++    </task>
++    <servers />
++  </component>
++  <component name="ToolWindowManager">
++    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
++    <editor active="true" />
++    <layout>
++      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
++      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
++      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
++      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
++      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
++      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
++      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
++      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
++      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
++      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
++      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
++      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
++      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
++      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
++      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
++      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
++      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
++      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
++    </layout>
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="1" />
++  </component>
++  <component name="VcsContentAnnotationSettings">
++    <option name="myLimit" value="2678400000" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager />
++    <watches-manager />
++  </component>
++  <component name="editorHistoryManager">
++    <entry file="file://$USER_HOME$/Downloads/main.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="304">
++          <caret line="23" column="58" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1120166012/builtins.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="319">
++          <caret line="809" column="8" lean-forward="false" selection-start-line="809" selection-start-column="8" selection-end-line="809" selection-end-column="8" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/main.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="256">
++          <caret line="28" column="59" lean-forward="true" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
++          <folding>
++            <element signature="e#1#16#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/Person.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="80">
++          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/School.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="432">
++          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
++          <folding>
++            <element signature="e#0#27#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/Staff.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="128">
++          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
++          <folding>
++            <element signature="e#0#25#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/Program.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="515">
++          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
++          <folding>
++            <element signature="e#0#25#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/Student.py">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="160">
++          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/Person.py b/Person.py
+new file mode 100644
+index 0000000..ca4af1c
+--- /dev/null
++++ b/Person.py
+@@ -0,0 +1,24 @@
++
++
++class Person:
++    def __init__(self, name, address):
++        self.name = name
++        self.address = address
++
++    def setName(self, name):
++        self.name = name
++
++    def setAddress(self, address):
++        self.address = address
++
++    def getName(self,):
++        return self.name
++
++    def getAddress(self):
++        return self.address
++
++    def __str__(self):
++        name = self.getName()
++        address = self.getAddress()
++        string = "Person[name={},address={}]".format(name, address)
++        return string
+diff --git a/Program.py b/Program.py
+new file mode 100644
+index 0000000..6a7f2be
+--- /dev/null
++++ b/Program.py
+@@ -0,0 +1,38 @@
++from School import School
++from Student import Student
++
++class Program(School, Student):
++    def __init__(self, name, school):
++        super().__init__(school)
++        self.name = name
++        self.expenses = 0
++        self.studentList = []
++
++
++    def setName(self, name):
++        self.name = name
++    def setBudget(self, budget):
++        self.budget = budget
++    def setSchool(self, school):
++        super().setSchool(school)
++    def addStudent(self, student):
++        self.studentList.append(student)
++    def removeStudent(self):
++        self.studentList.pop()
++
++
++    def getName(self,):
++        return self.name
++    def getBudget(self):
++        return self.budget
++    def getSchool(self):
++        return super().getName()
++    def getStudents(self):
++        return self.studentList
++
++    def calculateIncome(self):
++        for x in self.studentList:
++            self.expenses += self.student.getFee()
++    def presentIncome(self):
++        self.calculateIncome()
++        return self.expenses
+\ No newline at end of file
+diff --git a/School.py b/School.py
+new file mode 100644
+index 0000000..1fc9016
+--- /dev/null
++++ b/School.py
+@@ -0,0 +1,36 @@
++from Program import Program
++from Staff import Staff
++
++class School(Program, Staff):
++    def __init__(self, name):
++        self.SchoolName = name
++        self.programList = []
++        self.staffList = []
++        self.budgetIncome = float(0)
++        self.budgetExpenses = float(0)
++
++    def setSchoolName(self, name):
++        self.name = name
++    def addProgram(self, program):
++        self.programList.append(program)
++    def removeProgram(self):
++        self.programList.pop()
++    def addStaff(self, staff):
++        self.staffList.append(staff)
++    def removeStaff(self):
++        self.staffList.pop()
++    def getSchoolName(self):
++        return self.SchoolName
++
++    def calculateBudget(self):
++        for x in self.staffList:
++            self.budgetExpenses += self.Staff.getPay()
++
++        for y in self.programList:
++            self.budgetIncome += self.Program.expenses
++
++    def reportBudget(self):
++        self.budgetExpenses = 0
++        self.budgetIncome = 0
++        self.calculateBudget()
++        return self.budgetIncome - self.budgetExpenses
+\ No newline at end of file
+diff --git a/Staff.py b/Staff.py
+new file mode 100644
+index 0000000..bb012a8
+--- /dev/null
++++ b/Staff.py
+@@ -0,0 +1,33 @@
++from Person import Person
++from School import School
++
++class Staff(Person, School):
++    def __init__(self, name, address, school, pay):
++        super().__init__(name, address)
++        super().__init__(school)
++        self.school = school
++        self.pay = float(pay)
++
++    def setName(self, name):
++        super().setName(name)
++    def setAddress(self, address):
++        super().setAddress(address)
++    def setSchool(self, school):
++        super().getSchoolName = school
++    def setPay(self, pay):
++        self.pay = pay
++
++    def getName(self):
++        return super().getName()
++    def getAddress(self):
++        return super().getAddress()
++    def getSchool(self):
++        return self.school
++    def getPay(self):
++        return self.pay
++
++    def __str__(self):
++        school = self.getSchool()
++        pay = "%.2f" % self.getPay()
++        string = "Staff[{},school={},pay={}]".format(super().__str__(), school, pay)
++        return string
+\ No newline at end of file
+diff --git a/Student.py b/Student.py
+new file mode 100644
+index 0000000..70df875
+--- /dev/null
++++ b/Student.py
+@@ -0,0 +1,38 @@
++
++from Person import Person
++
++class Student(Person):
++    def __init__(self, name, address, program, year, fee):
++        super().__init__(name,address)
++        self.program = str(program)
++        self.year = int(year)
++        self.fee = float(fee)
++
++    def setName(self, name):
++        super().setName(name)
++    def setAddress(self, address):
++        super().setAddress(address)
++    def setProgram(self, program):
++        self.program = program
++    def setYear(self, year):
++        self.year = year
++    def setFee(self, fee):
++        self.fee = fee
++
++    def getName(self,):
++        return super().getName()
++    def getAddress(self):
++        return super().getAddress()
++    def getProgram(self):
++        return self.program
++    def getYear(self):
++        return self.year
++    def getFee(self):
++        return self.fee
++
++    def __str__(self):
++        program = self.getProgram()
++        year = self.getYear()
++        fee = "%.2f" % self.getFee()
++        string = "Student[{},program={},year={},fee={}]".format(super().__str__(), program, year, fee)
++        return string
+diff --git a/__pycache__/Person.cpython-36.pyc b/__pycache__/Person.cpython-36.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..21ebf42f64dbd2b977ca6011ca3b2a577fe48bbc
+GIT binary patch
+literal 1130
+zcma)4O^?$s5Vf5&NwaNX5ho6)*GRwtZm=L$i^Q#43GJl>Syi2uR&84B^suEpb@?&;
+zr5w2MFF5hWPCr!bVIA2s?RegM<C!<jX8h|<v-eyu_Lm(k5B^7N^909drkLV)*jv$K
+zN_=67H^Be<g=}~G0#3$yT(O=|T!}l@^OUE2SYOpt09#X`ieLj(S21j;&Qt?7Qcd8t
+z%AlKRGtUR4fEHQ8zrr?;ajf~8NwyX^!Gj#$Nkr-A{aIFqeWi3}OyZTk$)-b1nVKMe
+zGhKuE_wMR#dSgJ5Ugo&kH|eMOU^&b3!lc*N-S*3N_qO;x&(oX5Vl*BW?boRj^lEWi
+zMpBORaUrD-C_@M10bf0;ZtS81Vx>iPuRX>Or+ufITX~7lgyf`>Mk`bY@XF9+MF)jN
+z_+cz6U$rW>D)ewNdWIbt`HsgjTCy03m+t+}j`+?Gd{uP75vE0!w(SjJtl6aMNL3qm
+zwVjqVa%HuUa#~gudKiZ->3)tFK$YI}Bbr?`hv=S(x<G)onl>D&X3I91w+V;EL{9`d
+zD7IqbtvyVh=&YW(*ZE50_x|VRMKyqMza^fgo@;u{G8oSFtY0MlQL~Ax3{0WN`RKG6
+zp_B+n`4o2ywV&|_U*pjK>Ov=}(_9k2lw~aCY_675@*7hASoWtbqC-Gv0@8Il_R2Ih
+m;fQ@d51Kkl5={dK$o<H3pN(`9ZtZ=kWpv?Ge6aaQXa50XeAj*e
+
+literal 0
+HcmV?d00001
+
+diff --git a/__pycache__/Staff.cpython-36.pyc b/__pycache__/Staff.cpython-36.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..e46b8b9646e1de33d8c2f666a4ce223d3adccf7f
+GIT binary patch
+literal 1818
+zcmbVMOKaOe5Z=|xvLiX~P}++r^k8UnNN=Gn4Jq{I7(y<t%ObQ=9>|uvD?{ztCk66b
+z`j>QUPyGu$b!JzRLrfv<!tRbe+WBVYo0-?X-#Y!_59THzKgqpif&3n}?7+bZrwJL6
+z0ion0;RZKv2{$8>n*++NbJDec!B?b93#T6mnT|vJSuHTFmi!7=MBoV-7<VM5oO0vV
+z9hgcsxdpPNWScu6+q}WuTQYEXlege*DBTA4K<6si=WURie3Ng1zQwos4%{0`x6AiH
+z=iL#D4192Lzp&4<AdW-3bO&#A4Yzy_M@DjTLl<;m<OU@Rb3vGqnF}kYAX%J%5!&n8
+zg)OI(NE9w(*W>GqvBHtzRhlM+9Vcm!73L(E!Dp6?lDM$O!6+&k0p}u;QaFGkTsR<C
+zO~%3`kdm?Q<oEIE@$f=I@`fj4_%x8i4{10ZMdM5k&(8XtSDpSWyGqByi^=5jI?g&r
+zLlw^9WF{~Y<V&J;Lfh1#^S0JjK86OWVBw8hMZE<=6?IN2@T_Ar1ez-vGRk`3e%BC9
+z_$^v+bgA%A_VH-ru?YvNrGlVyUn7@q{|mSUk56>QD(nqFSjWZyP*Y)V)!60pHTYBf
+z8Uq2I39BQfikS*bv7{ob!z`NM)4Adq|EmBuYe21gJf13oGO;M@jIQt;!0QJy%x(qd
+z)nK3qDQIxvjaxB_k!eQr2V7p3TvEm5dMbC}<qqr$tfaAg_K#>ScvcbkH^4mr!(9QE
+z+^t@&VJhyBn+3TkqbqsS7!Om}1Y4SxgL^n7Wwq{cFuG@TA3UfG2TTDWPwruqOld_8
+zfK7#4G4&Dzj3XyY7=$3voE(s)!HpZ3IxvZ>9Bb6b&84|8p)bwe+<I|%6wjZkGWhgu
+z`BKlFw;;jDf$MYE7W-gVV7!GBr(zUjWiK-(Gr?Hb(lOM72&PviuE&?_6@dXggDo+3
+zLS5?7y}G?Cb8Vc1IOAXrwip|we43!_G4^E|BwC{;lo}KQJ63GtfyE}U>I7E7%5Q<V
+zg<lTGFiH}}R?Jpzs?mdqRLMjO;GgXop5Yp<S=|D)J!os3P3p(Wl9td;;l9y+zr#LK
+I_2?OY07~0Zq5uE@
+
+literal 0
+HcmV?d00001
+
+diff --git a/__pycache__/Student.cpython-36.pyc b/__pycache__/Student.cpython-36.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..b956bafc19439882e7e00e5d22e5003836832da9
+GIT binary patch
+literal 2158
+zcmbVN%WfMt6eZ_vS&|()aUN|7XOV?~HV7P`iy#Raq-b}JfHaG$Du{tNa%JdMa<s53
+zuf{;~EBPfZ(^Y?=tDeglN{ZwFPG`W&JL2QqdwF>Dq|vDT^0Cor2aNsARvvt_AJFt6
+zjAW7z*@$%*XFoIPN&k{bKVya8;WBu`TH!yK#ai4%?M&&(xJRGv@heBahm$cZVIA)s
+z>vPGacbRm2>-#c*A6P$>5&TfbGPz`(NN&j*`dDtuI{L)UX~-t#Y*~Lt?!vFh8*&fh
+z+j3vtL|>P;<N^AIopW2>!JOth7O>6^LcVL_H~CCv<GdGD0a8!FQqzxNa#pZYKIe0<
+z@Hor8xnJ-(6Mi1d1M7u(G!Ly8ONLGPaVs&Qo=r1l5+MfTK`w;xb*@Z2Rg)8yj*LGT
+z=O#GIQf0#aaFXW6?`K&nGJ(#9eG`n+QD)*)N|kA?VuYc#$ZW%)!dpW0hN;#<d|>}R
+zd-b&YR-@$Imt)LNb@#_fZ#F_wy8HTd`|!KN_F4YNWZZo_ot_N(`QcHwO8U|COoiBy
+znoeLCZ}J-6^IbQ?#ozO27!UQ-Y<+g&xcU^FgCk}Bo+9d)SZDb$GHH3Lj&Id~X>qkf
+zJ}p%@$n3#TUfM$N^Bsp>t^QxoH7tHvmd~L#fw76ck6$S+hrYLhUTv@uz$=<xg8?g;
+zSY*xZK{+^kXg145s)nL!mlU8PT!mQ;Umufr;V>;n)-dT1eg)B})(&vB#58t&G)uth
+zILR;1ahYKRw4bt!s_MX+D;331k7JA;>Zw^KQ8h~@6>A(isW`+fhc*xJHdY>>Ik-h`
+z)xs~tt6`ZV&gUTS0FIi2TySQ&b_3ONhQwvgPOA(nzLY5Ig`_wtF5LSJl%vXeL9c|e
+zG`Sio1{AU2>lK{UDq4nI3#62%^0KedFaiip|C<$z1u@E@Mai5bSz>%&m8@VFxNN5!
+zy(h`@3LN`|FTGPpF(f)H=sJ=-2N#fL2$6q$9z1+>)IWb%G4Qv)F20?X*Y7#pGvrJ?
+zlo#Fatw`Mkn4)s4uV75npQurqS7IgvBwUDASmyVsD4Pg_gYn5GKks9w2WVC>7*Ful
+z`N4|JxqWx(--3i6{}weNMiV(3l3y3%&sjPwN3333$y9X5)J-zC$j}{7bQu&;b1fA`
+zQJ6;cx6#XnLm`%ob3t1<rmB;AYuW~}Ms=_5CG`4BPtmMn$PQ_?{aEf+dbF2Go|Rd=
+LplSBD)V==zOr@H=
+
+literal 0
+HcmV?d00001
+
+diff --git a/main.py b/main.py
+new file mode 100644
+index 0000000..51d38ef
+--- /dev/null
++++ b/main.py
+@@ -0,0 +1,88 @@
++
++import unittest
++
++from Person import Person
++from Staff import Staff
++from Student import Student
++
++class TestPerson(unittest.TestCase):
++    def test_person_01_constructor( self ):
++        p = Person("Mark", "Min Gata 1")
++        self.assertEqual( str(p), "Person[name=Mark,address=Min Gata 1]" )
++
++    def test_person_02_get_name( self ):
++        p = Person("Mark", "Min Gata 1")
++        self.assertEqual( p.getName(), "Mark" )
++
++    def test_person_03_get_address( self ):
++        p = Person("Mark", "Min Gata 1")
++        self.assertEqual( p.getAddress(), "Min Gata 1" )
++
++    def test_person_04_set_address( self ):
++        p = Person("Mark", "Min Gata 1")
++        p.setAddress( "Annan Gata 2" )
++        self.assertEqual( p.getAddress(), "Annan Gata 2" )
++
++
++class TestStudent(unittest.TestCase):
++    def test_student_01_constructor( self ):
++        p = Student("Mark", "Min Gata 1", "IoT", 17, 50000)
++        self.assertEqual( str(p), "Student[Person[name=Mark,address=Min Gata 1],program=IoT,year=17,fee=50000.00]" )
++
++    def test_student_02_get_program( self ):
++        p = Student("Mark", "Min Gata 1", "IoT", 17, 50000)
++        self.assertEqual( p.getProgram(), "IoT" )
++
++    def test_student_03_set_program( self ):
++        p = Student("Mark", "Min Gata 1", "IoT", 17, 50000)
++        p.setProgram( "3D Design" )
++        self.assertEqual( p.getProgram(), "3D Design" )
++
++    def test_student_04_get_year( self ):
++        p = Student("Mark", "Min Gata 1", "IoT", 17, 50000)
++        self.assertEqual( p.getYear(), 17 )
++
++    def test_student_05_set_year( self ):
++        p = Student("Mark", "Min Gata 1", "IoT", 17, 50000)
++        p.setYear(16)
++        self.assertEqual( p.getYear(), 16 )
++
++    def test_student_06_get_fee( self ):
++        p = Student("Mark", "Min Gata 1", "IoT", 17, 50000)
++        self.assertEqual( p.getFee(), 50000 )
++
++    def test_student_07_set_fee( self ):
++        p = Student("Mark", "Min Gata 1", "IoT", 17, 50000)
++        p.setFee( 125.66 )
++        self.assertEqual( p.getFee(), 125.66 )
++
++
++
++
++class TestStaff(unittest.TestCase):
++    def test_staff_01_constructor( self ):
++        p = Staff("Mark", "Min Gata 1", "Nackademin", 50)
++        self.assertEqual( str(p), "Staff[Person[name=Mark,address=Min Gata 1],school=Nackademin,pay=50.00]" )
++
++    def test_staff_02_get_school( self ):
++        p = Staff("Mark", "Min Gata 1", "Nackademin", 50)
++        self.assertEqual( p.getSchool(), "Nackademin" )
++
++    def test_staff_03_set_school( self ):
++        p = Staff("Mark", "Min Gata 1", "Nackademin", 50)
++        p.setSchool( "Medieinstitutet" )
++        self.assertEqual( p.getSchool(), "Medieinstitutet" )
++
++    def test_staff_04_get_pay( self ):
++        p = Staff("Mark", "Min Gata 1", "Nackademin", 50)
++        self.assertEqual( p.getPay(), 50 )
++
++    def test_staff_05_set_pay( self ):
++        p = Staff("Mark", "Min Gata 1", "Nackademin", 50)
++        p.setPay( 125.66 )
++        self.assertEqual( p.getPay(), 125.66 )
++
++
++
++if __name__ == '__main__':
++    unittest.main(verbosity=2)
+-- 
+2.14.1.windows.1
+
